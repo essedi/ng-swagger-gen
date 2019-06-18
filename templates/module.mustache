@@ -30,7 +30,12 @@ export class {{moduleClass}} {
       providers: [
         {
           provide: {{configurationClass}},
-          useValue: {rootUrl: customParams.rootUrl}
+          useValue: {
+                        rootUrl: customParams.rootUrl,
+                        grant_type: customParams.grant_type,
+                        client_id: customParams.client_id,
+                        client_secret: customParams.client_secret
+                      }
         }
       ]
     }
